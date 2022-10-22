@@ -1,0 +1,183 @@
+<section>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class=" container-fluid ">
+                <div>
+                    <a class="navbar-brand " href="#"> <strong>Zaka Parts</strong> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+
+
+                <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/blogs">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/portfolio">Portfolio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
+                            </li>
+
+                            <button class="btn btn-outline-light" type="submit">Logout</button>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+</section>
+
+
+<div class="container">
+
+    <section class="intro">
+
+        <!-- <div class=" d-flex" id="wrapper">
+            <div class="bg-secondary border-right" id="sidebar-wrapper" [ngClass]="status ? 'hide' : 'show'">
+    
+                <div class="list-group list-group-flush">
+                    
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary">Overview</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary">Events</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary">Profile</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary">Status</a>
+                </div>
+            </div>
+            
+        </div> -->
+
+        <!--product table part -->
+        <h1 class="text-center pt-5">Product List</h1>
+        <!-- <div class="card shadow-4-strong" style="background-color: #f5f7fa;">
+            <div class="card-body">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Discription</th>
+                            <th scope="col">Product Price</th>
+                            <th scope="col">Product Quantity</th>
+                            <th scope="col">Product Available</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of productList; let i = index">
+                            <th scope="row">{{ i+1 }}</th>
+                            <td>{{data.name}}</td>
+                            <td>Designed specifically for the performance enthusiast Iridium IX offers extreme ignitability,
+                                improved
+                                throttle response and superior anti fouling.NGK</td>
+                            <td>{{data.price}}</td>
+                            <td>{{data.quantity}}</td>
+                            <td>{{data.available}}</td>
+                            <td><button (click)="deleteProduct(data.oid)" type="button"
+                                    class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> -->
+        <div class="btn-container">
+            <button (click)="gotoAddProduct()" type="button" class="btn btn-info ">Add</button>
+        </div>
+
+        <div>
+            <div>
+                <div class="">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card shadow-2-strong" style="background-color: #b8c5d8;">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Product Discription</th>
+                                                    <th scope="col">Product Price</th>
+                                                    <th scope="col">Product Quantity</th>
+                                                    <th scope="col">Product Available</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let data of productList; let i = index">
+                                                    <th scope="row">{{ i+1 }}</th>
+                                                    <td>{{data.name}}</td>
+                                                    <td>Designed specifically for the performance enthusiast Iridium IX
+                                                        offers extreme ignitability,
+                                                        improved
+                                                        throttle response and superior anti fouling.NGK</td>
+                                                    <td>{{data.price}}</td>
+                                                    <td>{{data.quantity}}</td>
+                                                    <td>{{data.available}}</td>
+                                                    <td><button (click)="deleteProduct(data.oid)" type="button"
+                                                            class="btn btn-danger">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+
+        <!-- order table part -->
+        <h1 class="text-center pt-5 ">Ordered List</h1>
+        <div>
+
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Order Quantity</th>
+                        <th scope="col">Address</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of orderList; let i = index">
+                        <th scope="row">{{ i+1 }}</th>
+                        <td>{{data.email}}</td>
+                        <td>{{data.phone}}</td>
+                        <td>{{data.quantity}}</td>
+                        <td>{{data.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- new-table -->
+
+
+</div>
+<app-footer></app-footer>

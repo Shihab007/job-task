@@ -1,0 +1,163 @@
+<app-header></app-header>
+<div class="card-top container-fluid">
+    <div class="hero-section">
+        <div class="row ">
+            <div class="col-6">
+                <div class="info">
+                    <h1>Zaka Parts Manufacturer</h1>
+                    <p>Enjoy entirely new level of driving experiance with our in depth selection of superior car
+                        engine,car
+                        bulbs, brake pads, spark plugs, and other automotive parts and accessories designed to keep your
+                        car
+                        running at its absolute best..</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <img class="py-4" src="../../../assets/banner-img.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Card-Section -->
+<div>
+    <h1 class="text-center my-3">Car Parts</h1>
+    <div class="row">
+        <div *ngFor="let data of productList" class="col-md-4 card shadow mb-5 bg-body rounded">
+            <img src="{{data.img}}" class="card-img-top mx-auto d-block" alt="...">
+            <div class="card-body">
+                <h4 class="card-title">{{data.name}}</h4>
+                <p class="card-text" data-bs-toggle="tooltip" data-bs-placement="top" title="Designed specifically for the performance enthusiast Iridium IX offers extreme ignitability, improved
+                throttle response and superior anti fouling.NGK">
+                    Designed specifically for the performance enthusiast Iridium IX offers extreme ignitability,
+                    improved
+                    throttle response and superior anti fouling.NGK
+                </p>
+                <p class="fs-6 fw-bold">Minimum Order Quantity: {{data.quantity}}</p>
+                <p class="fs-6 fw-bold">Available Order Quantity:{{data.available}}</p>
+                <p class="fs-6 fw-bold">Price: {{data.price}}</p>
+                <button (click)="goToOrderPage(data.oid)" class="btn btn-primary" type="submit">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="business-summary container ">
+    <div class="d-flex justify-content-center">
+        <h1>Business Summary</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img class="icon" src="../../../assets/icon/diagram.png" alt="">
+            </div>
+            <div class="col">
+                <img class="icon" src="../../../assets/icon/review.png" alt="">
+            </div>
+            <div class="col">
+                <img class="icon" src="../../../assets/icon/customer-support.png" alt="">
+            </div>
+            <div class="col">
+                <img class="icon" src="../../../assets/icon/customer.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>120M+ Annual revenue</p>
+            </div>
+            <div class="col">
+                <p>33K+ Reviews</p>
+            </div>
+            <div class="col">
+                <p>50+ Tools</p>
+            </div>
+            <div class="col">
+                <p>Served 100+ customers</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="Our-Partners container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img class="icon" src="" alt="">
+            </div>
+            <div class="col">
+                <img class="icon" src="" alt="">
+            </div>
+            <div class="col">
+                <img class="icon" src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- reviews section -->
+<h1 class="text-center">Our Client Says</h1>
+<div class="container">
+    <div class="row row-cols-3">
+
+        <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded-3">
+                <div class=" d-flex">
+                    <div class="py-5">
+                        <img id="avatar" src="../../../assets/icon/user.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p>Name: Md Shihab</p>
+                        <p class="card-text fw-bold">Comment: very good</p>
+                        <p class="card-text fw-bold">Rating: 3/5 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded-3">
+                <div class=" d-flex">
+                    <div class="py-5">
+                        <img id="avatar" src="../../../assets/icon/user.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p>Name: Md Shihab</p>
+                        <p class="card-text fw-bold">Comment: very good</p>
+                        <p class="card-text fw-bold">Rating: 3/5 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded-3">
+                <div class=" d-flex">
+                    <div class="py-5">
+                        <img id="avatar" src="../../../assets/icon/user.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p>Name: Md Shihab</p>
+                        <p class="card-text fw-bold">Comment: very good</p>
+                        <p class="card-text fw-bold">Rating: 3/5 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col">Column</div>
+      <div class="col">Column</div>
+      <div class="col">Column</div> -->
+    </div>
+</div>
+
+
+<app-footer></app-footer>
+
+
+<!-- example -->

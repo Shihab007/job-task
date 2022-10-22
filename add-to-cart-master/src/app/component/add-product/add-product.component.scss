@@ -1,0 +1,18 @@
+@import "../../theme_variable.scss";
+
+.card {
+    margin: auto;
+}
+
+.cart {
+    padding-top: 70px;
+}
+
+.btn {
+    background-color: $primary;
+    color: antiquewhite;
+}
+
+.btn:hover {
+    background-color: rgb(158, 9, 158);
+}

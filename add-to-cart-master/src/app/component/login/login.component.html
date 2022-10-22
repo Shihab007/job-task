@@ -1,0 +1,132 @@
+<section class="vh-100 ">
+    <!-- login -->
+    <div *ngIf="showSignIn" class="container py-2 h-100 signin">
+        <div class="row d-flex justify-content-center align-items-center h-100 ">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5 ">
+                <div class="card shadow-2-strong shadow p-3 mb-5 bg-body rounded" style="border-radius: 1rem; ">
+                    <div class="card-body p-5 text-center">
+                        <a class="fs-3 p-4 fw-bold text-decoration-none " routerLink="/">Zaka Parts</a>
+                        <h3 class="mb-5">Sign in</h3>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="typeEmailX-2">Email</label>
+                            <input [(ngModel)]="entity.email" [ngModelOptions]="{standalone:true}" type="email" #email
+                                id="typeEmailX-2" class="form-control form-control-lg" />
+
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="typePasswordX-2">Password</label>
+                            <input [(ngModel)]="entity.password" [ngModelOptions]="{standalone:true}" type="password"
+                                #password id="typePasswordX-2" class="form-control form-control-lg" />
+
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-start mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                            <label class="form-check-label" for="form1Example3"> Remember password </label>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg btn-block" type="submit"
+                            (click)="onSignin(email.value,password.value)">Login</button>
+
+                        <p class="small  pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                        <p>Don't have an account? <a (click)="registerPage()" class="link-info"
+                                style="cursor: pointer;">Register here</a></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sign-up -->
+    <div *ngIf="showSignUp" class="container singup">
+
+        <div class="col-lg-6 mb-5 mb-lg-0 m-auto">
+
+            <div class="card">
+                <a class="fs-3 p-4 fw-bold text-decoration-none d-flex  justify-content-center" href="#">
+                    Zaka Parts
+                </a>
+                <div class="card-body py-5 px-md-5">
+
+                    <form>
+
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input type="text" id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1">First name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline">
+                                    <input type="text" id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2">Last name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input [(ngModel)]="entity.email" [ngModelOptions]="{standalone:true}" #email type="email"
+                                id="form3Example3" class="form-control" />
+                            <label class="form-label" for="form3Example3">Email address</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input [(ngModel)]="entity.password" [ngModelOptions]="{standalone:true}" #password
+                                type="password" id="form3Example4" class="form-control" />
+                            <label class="form-label" for="form3Example4">Password</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                            <label class="form-check-label" for="form2Example33">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-block mb-4"
+                                (click)="onSignup(email.value,password.value)">
+                                Sign up
+                            </button>
+                        </div>
+
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>or sign up with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <app-dashboard *ngIf="isSingedIn" (isLogout)="handleLogout"></app-dashboard> -->
+</section>

@@ -1,0 +1,77 @@
+<!-- header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class=" container-fluid ">
+            <div>
+                <a class="navbar-brand" style="color: white; font-weight: 800;" href="#">Zaka Parts</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page" routerLink="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page"
+                                routerLink="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page"
+                                routerLink="/portfolio">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white;" aria-current="page"
+                                routerLink="/dashboard">Dashboard</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<!-- Purchase form -->
+<h1 class="text-center pt-5 fw-bold">Purchase Form</h1>
+<div class="cart ">
+    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 50rem;">
+        <div class="card-body ">
+            <form class="row g-3">
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input [(ngModel)]="entity.email" [ngModelOptions]="{standalone:true}" type="email"
+                        class="form-control" id="email" name="email">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="typePhone" class="form-label">Phone</label>
+                    <input [(ngModel)]="entity.phone" [ngModelOptions]="{standalone:true}" type="tel"
+                        class="form-control" id="typePhone" placeholder="Phone Number">
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label" for="typeNumber">Order Quantity</label>
+                    <input [(ngModel)]="entity.quantity" [ngModelOptions]="{standalone:true}" type="number"
+                        id="typeNumber" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input [(ngModel)]="entity.address" [ngModelOptions]="{standalone:true}" type="text"
+                        class="form-control" id="inputAddress" placeholder="Address">
+                </div>
+
+                <div class="col-6">
+                    <button type="submit" class="btn" (click)="addOrder()"> ORDER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

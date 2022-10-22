@@ -1,0 +1,103 @@
+@import "../../theme_variable.scss";
+
+.navbar {
+    background-color: $primary;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .show {
+        margin-left: 0 !important;
+    }
+
+    .hide {
+        margin-left: -15rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .show {
+        margin-left: -15rem !important;
+    }
+
+    .hide {
+        margin-left: -0 !important;
+    }
+}
+
+table {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//new-table
+.intro {
+    height: 150%;
+}
+
+table td,
+table th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card {
+    border-radius: .5rem;
+}
+
+.mask-custom {
+    background: rgba(24, 24, 16, .2);
+    border-radius: 2em;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    padding: 10px 0;
+}
